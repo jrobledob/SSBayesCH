@@ -79,7 +79,7 @@ run_G=function(Data,N.Groups,Prior,N.Samples,Pop.col,Geno.cols,Sel.SNP="TRUE",ta
   sel.k=N.Groups[sel]
   Group.sizes=Clus[[sel]]@size
   Grouping=matrix(Clus[[sel]]@cluster)
-  Memb.Prob=BayesFactor::posterior(Clus[[sel]])
+  Memb.Prob=flexmix::posterior(Clus[[sel]])
   return(list(N_Groups=sel.k,Groups=Grouping,Group.sizes=Group.sizes,Post.means=Post.means,
               NCandidateLoci=N.Sel,Selected_Loci=Sel))
 }
