@@ -72,7 +72,7 @@ run_G=function(Data,N.Groups,Prior,N.Samples,Pop.col,Geno.cols,Sel.SNP="TRUE",ta
     if(length(Clus[[i]])==2){
       AIC[i]=NA
     }else{
-      AIC[i]=summary(Clus[[i]])@AIC
+      AIC[i]=flexmix::summary(Clus[[i]])@AIC
     }
   }
   sel=which.min(AIC)
